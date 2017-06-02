@@ -3,10 +3,10 @@ const app = express();
 const moment = require('moment');
 const path = require('path') //To get the file path to a folder we will require the native Node moduel, path.
 
-app.use(express.static(path.join(__dirname + '/public'))); //dirname contains file path of current folder. second parameter is folder containing static resources.
+// app.use(express.static(path.join(__dirname + '/public'))); //dirname contains file path of current folder. second parameter is folder containing static resources.
 
 app.get('/', function (req, res) {
-  var day = moment().format("ddd, hA");
+  var day = moment().format("H:mm:ss");
   res.send(day);
 })
 
